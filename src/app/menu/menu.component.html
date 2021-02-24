@@ -1,0 +1,27 @@
+<header class='menu'>
+    <div class='logo'><a routerLink="/home">Rule of Thumb.</a></div>
+    <nav class="main-menu">
+        <a routerLink="/pastTrials" routerLinkActive="active">Past Trials</a>
+        <a routerLink="/howItWorks" routerLinkActive="active">How It Works</a>
+        <a routerLink="/logIn" routerLinkActive="active">Log In/Sign Up</a>
+        <a>
+            <fa-icon [icon]="faSearch"></fa-icon>
+        </a>
+    </nav>
+    <nav class="mobile-menu">
+        <button type='button' class='mob-button' (click)='this.toggleMenu()'>
+          <fa-icon [icon]="faBars" size='2x'></fa-icon>
+        </button>
+        <div [ngClass]="mobileMenuDisplayed ? 'display' : ''">
+            <a class='close-mob-menu' type='button' (click)='this.toggleMenu()'>
+                <fa-icon [icon]="faChevronCircleUp" size='sm'></fa-icon>
+            </a>
+            <a routerLink="/pastTrials" routerLinkActive="active">Past Trials</a>
+            <a routerLink="/howItWorks" routerLinkActive="active">How It Works</a>
+            <a routerLink="/logIn" routerLinkActive="active">Log In/Sign Up</a>
+            <a href="#">
+                <fa-icon [icon]="faSearch"></fa-icon>
+            </a>
+        </div>
+    </nav>
+</header>

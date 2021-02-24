@@ -1,0 +1,48 @@
+div.call-to-action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 4vw);
+    padding: 2vh 2vw;
+    background-color: rgb(235, 235, 235);
+    color: #333333;
+}
+
+div.call-to-action div.title {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    min-width: 200px;
+}
+
+div.call-to-action div.title h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: calc(0.9em + 0.3vw);
+    line-height: 1em;
+}
+
+div.call-to-action div.title h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: calc(0.9em + 0.3vw);
+}
+
+div.call-to-action div.content {
+    font-weight: 500;
+    width: 70%;
+    font-size: calc(0.8em + .2vw);
+    min-width: 280px;
+}
+
+div.call-to-action a {
+    color: #333;
+    font-weight: 200;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    div.call-to-action div.title {
+        margin-bottom: 2vh;
+    }
+}

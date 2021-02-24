@@ -1,0 +1,56 @@
+<div class="polls-container">
+    <div *ngFor="let poll of polls" class='poll' [style.background-image]="'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.9) 100%), url(./../../../assets/img/poll_header_'+poll.id+'.png)'">
+        <h1 class="name">
+            <i [ngClass]="poll.votesUp > poll.votesDown ? 'thumb-label up' : 'thumb-label down'">
+            <fa-icon [icon]="faThumbsUp" *ngIf="poll.votesUp >= poll.votesDown"></fa-icon>
+            <fa-icon [icon]="faThumbsDown" *ngIf="poll.votesUp < poll.votesDown"></fa-icon>
+        </i>
+            <span>{{poll.name}}</span>
+        </h1>
+        <h5 class="info">
+            <span class="date">{{transformPubDate(poll.pubdate)}}</span> ago in
+            <span class="category">{{poll.category}}</span>
+        </h5>
+        <p class="description" *ngIf="!poll.voted; else descriptionVoted">{{poll.description}}</p>
+        <ng-template #descriptionVoted>
+            <p class="description" [ngStyle]="{'margin-bottom': '5vh'}">Thank you for voting!</p>
+        </ng-template>
+        <div class="voting-bar" *ngIf="!poll.voted; else voteAgain">
+            <div [ngClass]="poll.selectedUp ? 'selected' : ''" class="vote-group up-vote" (click)="selectThumb(poll, 'up')">
+                <input type='radio' name='vote' value='up-vote' />
+                <label for="up-vote">
+              <fa-icon [icon]="faThumbsUp"></fa-icon>
+            </label>
+            </div>
+            <div [ngClass]="poll.selectedDown ? 'selected' : ''" class="vote-group down-vote" (click)="selectThumb(poll, 'down')">
+                <input type='radio' name='vote' value='down-vote' />
+                <label for="down-vote">
+              <fa-icon [icon]="faThumbsDown"></fa-icon>
+            </label>
+            </div>
+            <button class="vote" (click)="vote(poll)">Vote now</button>
+            <div class="not-selected-error" *ngIf="poll.showNotSelectedError">
+                <p>Please select an option</p>
+            </div>
+        </div>
+        <ng-template #voteAgain>
+            <div class="voting-bar">
+                <button class="vote" (click)="poll.voted=false">Vote again</button>
+            </div>
+        </ng-template>
+        <div class="progress-bar">
+            <div class="progress-thumb-up" [style.width]="getVotePercentage(poll.votesUp , poll.votesDown).up + '%'">
+                <div class="info">
+                    <fa-icon [icon]="faThumbsUp"></fa-icon>
+                    <span>{{getVotePercentage(poll.votesUp, poll.votesDown).up}}%</span>
+                </div>
+            </div>
+            <div class="progress-thumb-down" [style.width]="getVotePercentage(poll.votesUp, poll.votesDown).down + '%'">
+                <div class="info">
+                    <span>{{getVotePercentage(poll.votesUp, poll.votesDown).down}}%</span>
+                    <fa-icon [icon]="faThumbsDown"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

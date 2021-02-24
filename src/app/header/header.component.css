@@ -1,0 +1,30 @@
+.main-header {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../../assets/img/header_01.png) no-repeat 0% 13%;
+    background-size: cover;
+}
+
+
+/* bigger laptops */
+
+@media only screen and (min-width: 1224px) {}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 850px) and (max-width: 1024px) {}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 550px) and (max-width: 800px) {}
+
+
+/* mobiles (landscape and portrait) */
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .main-header {
+        min-height: 100%;
+    }
+}

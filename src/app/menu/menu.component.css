@@ -1,0 +1,125 @@
+header.menu {
+    max-width: 100%;
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.25) 0%, rgba(51, 51, 51, 0.52941) 49%, rgba(51, 51, 51, 0.81961) 100%);
+    padding: 0 6vw 0 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.logo {
+    font-size: calc(1.5em + .7vw);
+    color: white;
+    font-weight: 400;
+    padding: 3vh 0;
+}
+
+div.logo>a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.main-menu {
+    width: 35%;
+    max-width: 450px;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1em;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.main-menu a.active {
+    position: relative;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+}
+
+nav.mobile-menu {
+    display: none;
+    align-items: center;
+    color: white;
+}
+
+nav.mobile-menu div {
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav.mobile-menu div.display {
+    display: flex;
+}
+
+nav.mobile-menu>div>a {
+    width: calc(100% - 4vw);
+    height: calc(25% - 4vw);
+    padding: 2vw;
+    color: black;
+    text-decoration: none;
+    font-size: calc(1.5em + .3vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.mobile-menu>div>a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+nav.mobile-menu>div>a:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+button.mob-button {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+a.close-mob-menu {
+    height: 5% !important;
+    font-size: 1.1em !important;
+    cursor: pointer;
+    padding: 5px 0 !important;
+    width: 100% !important;
+}
+
+button.close-mob-menu:hover {
+    opacity: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 720px) {
+    nav.main-menu {
+        display: none;
+    }
+    nav.mobile-menu {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+    div.poll-box {
+        width: 60%;
+        height: 100%;
+        min-height: auto;
+    }
+}
