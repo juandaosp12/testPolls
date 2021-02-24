@@ -17,7 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   
   - You can solve this part with either full Vanilla JS and some patterns, OR any sort of framework such as Angular, React, Vuejs, Ember, etc. Use the one you feel more confortable with.
 
-##Design Process
+## Design Process
 
 For the design process I used the component destructuring technique as follows:
 
