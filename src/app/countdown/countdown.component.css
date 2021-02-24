@@ -1,0 +1,41 @@
+.countdown {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 6vh;
+    min-height: 35px;
+    display: flex;
+}
+
+.countdown div {
+    display: flex;
+    align-items: center;
+}
+
+.countdown .label {
+    justify-content: flex-end;
+    position: relative;
+    padding-right: 1vw;
+    width: 35%;
+    color: white;
+    background: linear-gradient( 90deg, rgba(51, 51, 51, 0.05) 0%, rgba(51, 51, 51, 0.12941) 49%, rgba(51, 51, 51, 0.41961) 100%);
+}
+
+.countdown .label:after {
+    content: '';
+    position: absolute;
+    right: -.8vh;
+    width: 0;
+    height: 0;
+    border-top: 0.6vh solid transparent;
+    border-bottom: 0.6vh solid transparent;
+    border-left: 0.8vh solid rgba(51, 51, 51, 0.51961);
+}
+
+.countdown .days {
+    width: calc(65% - 1vw);
+    padding-left: 1vw;
+    font-size: calc(1.5em + .5vw);
+    color: rgba(51, 51, 51, 0.95);
+    background-color: rgba(255, 255, 255, 0.75);
+}

@@ -15,9 +15,11 @@ import { CookieService } from 'ngx-cookie-service';
 import { PastTrialsViewComponent } from './past-trials-view/past-trials-view.component';
 import { HowItWorksViewComponent } from './how-it-works-view/how-it-works-view.component';
 import { LogInViewComponent } from './log-in-view/log-in-view.component';
+import { CountdownComponent } from './countdown/countdown.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     HomeViewComponent,
@@ -29,7 +31,9 @@ import { LogInViewComponent } from './log-in-view/log-in-view.component';
     PastTrialsViewComponent,
     HowItWorksViewComponent,
     LogInViewComponent,
-  ],
+    CountdownComponent,
+      FooterComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
