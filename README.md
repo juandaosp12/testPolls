@@ -123,4 +123,7 @@ Group of Polls defined by mock-polls, it have the initial data:
 * Footer
 
 ![GitHub Logo](/images/componentDestructuring.png)
-Format: ![Alt Text](url)
+
+# Application
+
+The application could be seen on https://juandaosp12.github.io/testPolls/home
