@@ -21,6 +21,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 For the design process I used the component destructuring technique as follows:
 
+![GitHub Logo](/images/componentDestructuring.png)
+
+### Component description
+
 * Header
 
 Contains the first image, the higligted poll on the header, and the menu. 
@@ -123,8 +127,6 @@ Group of Polls defined by mock-polls, it have the initial data:
 * SubmitPollBar
 
 * Footer
-
-![GitHub Logo](/images/componentDestructuring.png)
 
 # Application
 
